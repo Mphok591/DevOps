@@ -1,0 +1,66 @@
+*******************************************************************
+Author : Mpho Koaho
+
+Date : 3/21/2020
+
+Visual Studio 2019 Product App
+
+*******************************************************************
+===========================================
+1. How to extract zipped file
+===========================================
+
+=> Right click ProjectApp.zip, chose extract here 
+
+
+=========================================
+2. How to load solution to Visual Studio
+=========================================
+=> Open Visual Studio
+=> Click File > Open and click Project/Solution
+=> Browse window will pop up, locate ProjectApp Folder and double click 
+=> Select ProjectApp.sln and click open
+=> VS will start preparing solution upload and on the top right panel Solution Explorer project will be loaded as Project.
+Note: When you expand the Project, It contains folder such as Controllers, Migrations, Models and Views
+
+==============================================
+3. What Package to Install and are as follows
+==============================================
+
+You can use Manage NuGet Package or Package Manager Console
+
+=================================
+=> using Package Manager Console 
+=================================
+
+type Install-Package Microsoft.EntityFramework.SqlServer and Hit Enter then it will start installing the package
+
+=> Ensure all these Packages are installed:
+
+   - Microsoft.EntityFrameworkCore.Design
+   - Microsoft.EntityFrameworkCore.Sqlite
+   - Microsoft.EntityFrameworkCore.Tools
+   - Microsoft.VisualStudio.Web.CodeGeneration.Design
+   - EnityFrameworkCore
+
+==============================
+=> Using Manage NuGet Package
+==============================
+   - Right click on Project App in the Solution Explorer
+   - look for Manage NuGet Packages and Click it
+   - Window for NuGet Package Manager will be open
+   - It contains Browse section- where you will search for package to install
+   - Installed section- displays all the installed packages
+   - Updates section - display all installed packages that needs upgrade to newer or latest versions.
+
+======================================
+4. How to Execute or run Project App
+======================================
+
+Once all installed Packages, Make sure you Build Solution
+
+-Right click on Project App and Click Build or Top Menu next to Project, Click Build and Select Build Solution
+-Click IIS Express with play Icon
+
+
+

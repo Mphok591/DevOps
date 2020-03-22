@@ -1,0 +1,51 @@
+﻿@using ProductApp.Controllers;
+
+@model IEnumerable<ProductApp.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Products</h1>
+
+<p>
+    <a asp-action="Create">Add New Product</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReleaseDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseDate)
+            </td>
+
+            
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.ProductId">Edit Product</a> |
+                                <a asp-action="Details" asp-route-id="@item.ProductId">Product Details</a> |
+                                <a asp-action="Delete" asp-route-id="@item.ProductId">Delete Product</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
